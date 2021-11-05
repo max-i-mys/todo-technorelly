@@ -44,7 +44,7 @@ export default function AddTodo() {
 						required
 					/>
 				</Form.Group>
-				<Button variant="success" type="submit">
+				<Button variant="outline-success" type="submit">
 					Add new task
 				</Button>
 			</Form>
