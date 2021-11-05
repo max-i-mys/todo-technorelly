@@ -9,6 +9,10 @@ body {
 .todo {
 	flex: 0 1 calc((100% / 3) - 1rem);
 }
+.finished {
+	text-decoration: line-through;
+	color: #ccc;
+}
 .todos-box {
 	gap: 1rem;
 	cursor: pointer;
