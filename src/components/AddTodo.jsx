@@ -15,6 +15,7 @@ export default function AddTodo() {
 				id: Date.now(),
 				title: titleValue,
 				description: descValue,
+				status: true,
 			}
 			dispatch(addTodo(newTodo))
 			e.target.reset()

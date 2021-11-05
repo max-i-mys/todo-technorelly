@@ -11,4 +11,5 @@ body {
 }
 .todos-box {
 	gap: 1rem;
+	cursor: pointer;
 }

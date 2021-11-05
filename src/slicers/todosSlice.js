@@ -11,15 +11,24 @@ const todosSlice = createSlice({
 		},
 		addTodo: (state, action) => {
 			state.todos.push(action.payload)
-			localStorage.setItem('todos', JSON.stringify(state.todos))
+			addToLocalStorage('todos', state.todos)
 		},
 		deleteTodo: (state, action) => {
 			state.todos = state.todos.filter(todo => todo.id !== action.payload.id)
-			localStorage.setItem('todos', JSON.stringify(state.todos))
+			addToLocalStorage('todos', state.todos)
+		},
+		updateTodo: (state, action) => {
+			const todoIndex = state.todos.findIndex(todo => todo.id === action.payload.id)
+			state.todos[todoIndex].status = !state.todos[todoIndex].status
+			addToLocalStorage('todos', state.todos)
 		},
 	},
 })
 
 export default todosSlice.reducer
 
-export const { initialTodo, addTodo, deleteTodo } = todosSlice.actions
+export const { initialTodo, addTodo, deleteTodo, updateTodo } = todosSlice.actions
+
+function addToLocalStorage(name, data) {
+	localStorage.setItem(name, JSON.stringify(data))
+}

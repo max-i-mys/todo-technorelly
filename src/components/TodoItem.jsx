@@ -1,12 +1,16 @@
 import { Card, CloseButton } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
-import { deleteTodo } from '../slicers/todosSlice'
+import { deleteTodo, updateTodo } from '../slicers/todosSlice'
 import { formatterDate } from '../utils/constants'
 export default function TodoItem({ todo }) {
 	const dispatch = useDispatch()
+	function handlerUpdate(e) {
+		e.preventDefault()
+		dispatch(updateTodo({ id: todo.id }))
+	}
 	return (
 		<>
-			<Card className="todo">
+			<Card className="todo" border={todo.status ? 'success' : 'dark'} onContextMenu={handlerUpdate}>
 				<Card.Body>
 					<Card.Title className="d-flex justify-content-between">
 						{todo.title}
