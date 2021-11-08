@@ -5,7 +5,7 @@ import AddTodo from './components/AddTodo'
 import TodoList from './components/TodoList'
 import HeaderMenu from './components/HeaderMenu'
 import { Route, Routes } from 'react-router'
-import PageStub from './components/ PageStub'
+import PageStub from './components/PageStub'
 
 function App() {
 	return (
