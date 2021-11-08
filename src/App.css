@@ -20,3 +20,6 @@ body {
 	padding: 40px 15px;
 	text-align: center;
 }
+.form-check-label {
+	cursor: pointer;
+}
