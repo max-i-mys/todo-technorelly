@@ -10,7 +10,7 @@ const todosSlice = createSlice({
 			state.todos = [...action.payload]
 		},
 		addTodo: (state, action) => {
-			state.todos.push(action.payload)
+			state.todos.unshift(action.payload)
 			addToLocalStorage('todos', state.todos)
 		},
 		deleteTodo: (state, action) => {

@@ -15,5 +15,8 @@ body {
 }
 .todos-box {
 	gap: 1rem;
-	cursor: pointer;
+}
+.error-template {
+	padding: 40px 15px;
+	text-align: center;
 }

@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router'
 import { addTodo } from '../slicers/todosSlice'
 
 export default function AddTodo() {
 	const [titleValue, setTitleValue] = useState(null)
 	const [descValue, setDescValue] = useState(null)
 	const dispatch = useDispatch()
+	const navigate = useNavigate()
 
 	function handlerAdd(e) {
 		e.preventDefault()
@@ -18,6 +20,7 @@ export default function AddTodo() {
 				status: true,
 			}
 			dispatch(addTodo(newTodo))
+			navigate('/')
 			e.target.reset()
 		}
 	}

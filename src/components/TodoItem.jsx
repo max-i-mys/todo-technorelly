@@ -19,7 +19,8 @@ export default function TodoItem({ todo }) {
 					onClick={() => dispatch(updateTodo({ id: todo.id }))}
 					type="checkbox"
 					label="finished"
-					className="m-2"
+					className="m-2 pointer-event"
+					id={`finished-${todo.id}`}
 					defaultChecked={todo.status ? false : true}
 				/>
 			</Card>
