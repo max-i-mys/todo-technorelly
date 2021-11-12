@@ -23,3 +23,21 @@ body {
 .form-check-label {
 	cursor: pointer;
 }
+.form-check-label:focus,
+.form-check-label:hover {
+	text-decoration: underline;
+}
+.nav-link:focus,
+.nav-link:hover {
+	text-decoration: underline;
+}
+.nav-link.active {
+	background-color: rgb(35, 117, 224);
+	color: #fff;
+	border-radius: 5px;
+}
+.nav-link.active:hover,
+.nav-link.active:focus {
+	color: #fff;
+	text-decoration: none;
+}

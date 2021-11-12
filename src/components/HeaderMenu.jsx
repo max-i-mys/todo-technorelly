@@ -1,5 +1,5 @@
 import { Col, Row } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function HeaderMenu() {
 	return (
@@ -8,14 +8,14 @@ export default function HeaderMenu() {
 				<Col className="mb-3">
 					<ul className="nav justify-content-center">
 						<li className="nav-item">
-							<Link className="nav-link" aria-current="page" to="/">
+							<NavLink className="nav-link" aria-current="page" to="/">
 								Todos
-							</Link>
+							</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link className="nav-link" to="/add">
+							<NavLink className="nav-link" to="/add">
 								Add todo
-							</Link>
+							</NavLink>
 						</li>
 					</ul>
 				</Col>
